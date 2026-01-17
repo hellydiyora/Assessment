@@ -1,0 +1,213 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 60px;
+  /* Space for fixed footer */
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+nav {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+  color: #444;
+}
+
+section {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+/* 3x3 Grid (No CSS Support Styles) */
+/* The assignment asked for visual grid without CSS on the elements themselves, 
+   but we need to make sure spans behave somewhat sanely if they aren't naturally lining up. 
+   However, adhering strictly to 'No CSS' for that section on the elements. 
+   The spans are inline, divs are block. It will look like rows of text. 
+   I will add a tiny bit of spacing just so it's readable, targeting the section id, 
+   but respecting the spirit of "without ... any css" layout systems (like grid/flex). */
+/* #grid span {
+  background: #e2e2e2;
+  border: 1px solid #999;
+  padding: 5px 10px;
+  margin: 2px;
+} */
+
+
+/* --- Box Model Gallery --- */
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: space-around;
+  background: #eee;
+  padding: 10px;
+}
+
+.box {
+  background: #add8e6;
+  text-align: center;
+  width: 150px;
+  box-sizing: content-box;
+  /* Ensuring padding/border add to size for visibility */
+}
+
+/* Row 1: Borders */
+.border-1 {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.border-2 {
+  border: 5px dashed #000;
+  padding: 10px;
+}
+
+.border-3 {
+  border: 10px double #000;
+  padding: 10px;
+}
+
+/* Row 2: Margins (Visualizing margins is tricky as they are invisible, 
+   so we rely on the flex spacing to show them pushing neighbors) */
+.margin-1 {
+  margin: 0;
+  border: 1px solid #333;
+}
+
+.margin-2 {
+  margin: 15px;
+  border: 1px solid #333;
+}
+
+.margin-3 {
+  margin: 30px;
+  border: 1px solid #333;
+}
+
+/* Row 3: Padding */
+.padding-1 {
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.padding-2 {
+  padding: 20px;
+  border: 1px solid #333;
+}
+
+.padding-3 {
+  padding: 40px;
+  border: 1px solid #333;
+}
+
+
+/* --- Positioning --- */
+.positioning-container {
+  background-color: #ddd;
+  height: 400px;
+  position: relative;
+  /* Context for absolute positioning */
+  padding: 20px;
+  border: 2px solid #666;
+}
+
+.pos-box {
+  width: 150px;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+/* 1. Static */
+.static-box {
+  background-color: #3498db;
+  position: static;
+  /* Top/Left have no effect on static */
+}
+
+/* 2. Relative */
+.relative-box {
+  background-color: #e74c3c;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  z-index: 10;
+}
+
+/* 3. Absolute */
+.absolute-box {
+  background-color: #2ecc71;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  /* Positioned relative to .positioning-container */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Sticky */
+.sticky-box {
+  background-color: #9b59b6;
+  position: sticky;
+  /* Standard */
+  position: -webkit-sticky;
+  /* Safari */
+  top: 0;
+  border: 2px solid gold;
+}
+
+
+/* --- Footer Fixed --- */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}

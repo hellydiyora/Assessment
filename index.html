@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML + CSS Practice Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#html-tags">Tags</a></li>
+            <li><a href="#seo">SEO</a></li>
+            <li><a href="#grid">No-CSS Grid</a></li>
+            <li><a href="#box-model">Box Model</a></li>
+            <li><a href="#fonts">Fonts</a></li>
+            <li><a href="#positioning">Positioning</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Main Header -->
+        <h1>HTML + CSS Practice Assignment</h1>
+
+        <!-- Section 1: Intro -->
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>Welcome to my practice page. This page demonstrates various HTML and CSS concepts including lists, grids,
+                the box model, typography, and positioning.</p>
+        </section>
+
+        <!-- Section: 10 Most Useful HTML Tags -->
+        <section id="html-tags">
+            <h2>Top 10 Useful HTML Tags</h2>
+            <dl>
+                <dt><strong>&lt;div&gt;</strong></dt>
+                <dd>The generic container for flow content, essential for grouping elements for styling.</dd>
+
+                <dt><strong>&lt;a&gt;</strong></dt>
+                <dd>The anchor tag, used for creating hyperlinks to other web pages or locations within the same page.
+                </dd>
+
+                <dt><strong>&lt;img&gt;</strong></dt>
+                <dd>Embeds an image into the document.</dd>
+
+                <dt><strong>&lt;p&gt;</strong></dt>
+                <dd>Represents a paragraph of text.</dd>
+
+                <dt><strong>&lt;ul&gt; / &lt;ol&gt;</strong></dt>
+                <dd>Creates unordered and ordered lists.</dd>
+
+                <dt><strong>&lt;li&gt;</strong></dt>
+                <dd>Represents an item in a list.</dd>
+
+                <dt><strong>&lt;span&gt;</strong></dt>
+                <dd>A generic inline container for phrasing content, used for styling parts of text.</dd>
+
+                <dt><strong>&lt;input&gt;</strong></dt>
+                <dd>Used to create interactive controls for web-based forms.</dd>
+
+                <dt><strong>&lt;form&gt;</strong></dt>
+                <dd>Represents a document section containing interactive controls for submitting information.</dd>
+
+                <dt><strong>&lt;head&gt;</strong></dt>
+                <dd>Container for metadata (data about data) and is placed between the html tag and the body tag.</dd>
+            </dl>
+        </section>
+
+        <!-- Section: SEO Research -->
+        <section id="seo">
+            <h2>SEO & Header Tags</h2>
+            <p>Search Engine Optimization (SEO) improves a website's visibility. Using correct header tags is crucial
+                for search engines to understand the hierarchy and importance of content.</p>
+            <h3>Important Header Tags for SEO:</h3>
+            <ul>
+                <li><strong>&lt;title&gt;</strong>: technically in the head, but the most important tag for SEO. Defines
+                    the title in search results.</li>
+                <li><strong>&lt;h1&gt;</strong>: The main heading of the page. Should contain the primary keyword and
+                    describe the page content. Usually only one per page.</li>
+                <li><strong>&lt;h2&gt;</strong>: Level 2 headings. Break up content into main sections.</li>
+                <li><strong>&lt;h3&gt;</strong>: Level 3 headings. Sub-sections under h2s.</li>
+                <li><strong>&lt;meta name="description"&gt;</strong>: While not a visible header, this meta tag provides
+                    the summary snippet in search results.</li>
+            </ul>
+        </section>
+
+        <!-- Section: 3x3 Grid (No CSS) -->
+        <section id="grid">
+            <h2>3x3 Grid (No CSS)</h2>
+            <p><em>This grid uses only &lt;div&gt; (block) and &lt;span&gt; (inline) elements to form a visual grid
+                    structure without any stylesheets or tables.</em></p>
+
+            <div>
+                <span>1</span> | <span>2</span> | <span>3</span>
+            </div>
+
+            <div>
+                <span>4</span> | <span>5</span> | <span>6</span>
+            </div>
+
+            <div>
+                <span>7</span> | <span>8</span> | <span>9</span>
+            </div>
+        </section>
+
+        <!-- Section: CSS Box Model Gallery -->
+        <section id="box-model">
+            <h2>CSS Box Model Gallery</h2>
+            <p>Showcasing Border, Margin, and Padding variations.</p>
+            <div class="gallery-container">
+                <!-- Row 1: Borders -->
+                <div class="gallery-row">
+                    <div class="box border-1">Border 1px</div>
+                    <div class="box border-2">Border 5px (Dashed)</div>
+                    <div class="box border-3">Border 10px (Double)</div>
+                </div>
+                <!-- Row 2: Margins -->
+                <div class="gallery-row">
+                    <div class="box margin-1">Margin Small</div>
+                    <div class="box margin-2">Margin Medium</div>
+                    <div class="box margin-3">Margin Large</div>
+                </div>
+                <!-- Row 3: Padding -->
+                <div class="gallery-row">
+                    <div class="box padding-1">Padding Small</div>
+                    <div class="box padding-2">Padding Medium</div>
+                    <div class="box padding-3">Padding Large</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Font Sizes (Inline Styling) -->
+        <section id="fonts">
+            <h2>Font Sizes & Units</h2>
+            <ul>
+                <li style="font-size: 16px;">
+                    This text is <strong>16px</strong>.
+                    <em>Use 'px' for precise, fixed-size control, often for borders or base settings, though less
+                        scalable for accessibility.</em>
+                </li>
+                <li style="font-size: 1.2em;">
+                    This text is <strong>1.2em</strong>.
+                    <em>Use 'em' for sizing relative to the parent element's font size. Good for component-level
+                        scalability.</em>
+                </li>
+                <li style="font-size: 1.5rem;">
+                    This text is <strong>1.5rem</strong>.
+                    <em>Use 'rem' (root em) for sizing relative to the root html font size. Best for global consistency
+                        and accessibility.</em>
+                </li>
+                <li style="font-size: 150%;">
+                    This text is <strong>150%</strong>.
+                    <em>Use '%' for fluid typography primarily used in responsive layouts.</em>
+                </li>
+                <li style="font-size: 12pt;">
+                    This text is <strong>12pt</strong>.
+                    <em>Use 'pt' (points) primarily for print media stylesheets. Rarely used for screen design.</em>
+                </li>
+                <li style="font-size: 3vw;">
+                    This text is <strong>3vw</strong>.
+                    <em>Use 'vw' (viewport width) for text that needs to scale dynamically with the browser window
+                        width, like hero headlines.</em>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section: Positioning -->
+        <section id="positioning">
+            <h2>CSS Positioning Creative Area</h2>
+            <p>Examples of static, relative, absolute, and sticky positioning.</p>
+
+            <div class="positioning-container">
+
+                <!-- Static -->
+                <div class="pos-box static-box">
+                    <strong>Static</strong>
+                    <p>Default behavior. Use for standard flow content.</p>
+                </div>
+
+                <!-- Relative -->
+                <div class="pos-box relative-box">
+                    <strong>Relative</strong>
+                    <p>Offset from its normal position. Use when you need to nudge an element or create a context for an
+                        absolute child.</p>
+                </div>
+
+                <!-- Absolute -->
+                <div class="pos-box absolute-box">
+                    <strong>Absolute</strong>
+                    <p>Removed from flow, positioned relative to nearest positioned ancestor. Use for overlays, badges,
+                        or precise placement.</p>
+                </div>
+
+                <!-- Sticky -->
+                <div class="pos-box sticky-box">
+                    <strong>Sticky</strong>
+                    <p>Toggles between relative and fixed based on scroll. Use for headers that should stick to top.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Spacer to allow scrolling for sticky/fixed testing -->
+        <div style="height: 500px; background-color: #f9f9f9; text-align: center; padding-top: 50px; color: #ccc;">
+            (Scroll space to demonstrate fixed footer)
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 HTML/CSS Assignment. This footer is fixed to the bottom.</p>
+    </footer>
+
+</body>
+
+</html>
